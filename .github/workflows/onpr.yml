@@ -2,6 +2,7 @@ name: Run Tests on PR
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
