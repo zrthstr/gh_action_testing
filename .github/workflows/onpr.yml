@@ -21,8 +21,8 @@ jobs:
 
       - name: in env other, echo env secret
         environment: other
-        run: echo "env secret in other is: ${{SOME_ENVIRONMENT_SECRET}}" | sed 's/./& /g'
+        run: echo "env secret in other is ${{ SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
 
       - name: in env environments_secret, echo env secret
         environment: environments_secret
-        run: echo "env secret in environments_secret is: ${{SOME_ENVIRONMENT_SECRET}}" | sed 's/./& /g'
+        run: echo "env secret in environments_secret is: ${{ SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
