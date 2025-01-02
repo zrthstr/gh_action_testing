@@ -14,3 +14,8 @@ jobs:
 
       - name: Run test script
         run: bash test.sh
+
+      - name: echo_Repository_secret_from_yml
+        run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}"
+
+
