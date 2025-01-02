@@ -21,7 +21,6 @@ jobs:
     environment: other
     runs-on: ubuntu-latest
     steps:
-
       - name: in env other echo env secret
         run: echo "env secret in other is ${{ secrets.SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
 
@@ -31,3 +30,9 @@ jobs:
     steps:
       - name: in env environments_secret echo env secret
         run: echo "env secret in environments_secret is ${{ secrets.SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
+
+  test3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: in NOenv echo env secret
+        run: echo "env secret in 'NOenv' is ${{ secrets.SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
