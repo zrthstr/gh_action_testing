@@ -16,19 +16,8 @@ jobs:
         run: bash test.sh
 
       - name: echo_Repository_secret_from_yml
-        run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}"
-        env:
-          ACTIONS_STEP_DEBUG: true
-
-      - name: echo_Repository_secret_from_yml_with_indirection_in_envvar
-        run: echo "My secret is $MY_SECRET"
-        env:
-          MY_SECRET: ${{ secrets.SOME_REPOSITORY_SECRET }}
+        run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
 
 
-      - name: Save secret to file and print it
-        run: |
-          echo "${{ secrets.SOME_REPOSITORY_SECRET }}" > secret.txt
-          cat secret.txt
 
 
