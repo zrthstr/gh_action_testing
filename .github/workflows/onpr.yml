@@ -36,3 +36,5 @@ jobs:
     steps:
       - name: in NOenv echo env secret
         run: echo "env secret in 'NOenv' is ${{ secrets.SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
+      - name: Run test script
+        run: bash test.sh
