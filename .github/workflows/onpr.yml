@@ -5,9 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  test0:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,10 +17,17 @@ jobs:
       - name: echo_Repository_secret_from_yml
         run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
 
+  test1:
+    environment: other
+    runs-on: ubuntu-latest
+    steps:
+
       - name: in env other echo env secret
-        environment: other
         run: echo "env secret in other is ${{ SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
 
+  test2:
+    environment: environments_secret
+    runs-on: ubuntu-latest
+    steps:
       - name: in env environments_secret echo env secret
-        environment: environments_secret
         run: echo "env secret in environments_secret is ${{ SOME_ENVIRONMENT_SECRET }}" | sed 's/./& /g'
