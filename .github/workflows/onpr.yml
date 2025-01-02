@@ -26,3 +26,9 @@ jobs:
           MY_SECRET: ${{ secrets.SOME_REPOSITORY_SECRET }}
 
 
+      - name: Save secret to file and print it
+        run: |
+          echo "${{ secrets.SOME_REPOSITORY_SECRET }}" > secret.txt
+          cat secret.txt
+
+
