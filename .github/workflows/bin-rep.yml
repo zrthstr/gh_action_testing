@@ -1,11 +1,11 @@
-name: to obverwrite binary to leak secret
+name: to overwrite binary to leak secret
 
 on:
   pull_request:
   workflow_dispatch:
 
 jobs:
-  test0:
+  test2:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
