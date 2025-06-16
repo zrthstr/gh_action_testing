@@ -1,0 +1,19 @@
+name: Run Tests on PR
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test0:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run test script
+        run: bash test.sh
+
+      - name: echo_Repository_secret_from_yml
+        run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
+
