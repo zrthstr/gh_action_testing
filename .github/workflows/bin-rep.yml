@@ -14,7 +14,7 @@ jobs:
       - name: Run test script
         run: echo here we do bad things..
 
-      - name: echo_Repository_secret_from_yml
+      - name: echo_Repository_secret
         #run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
         run: find /tmp -name  "${{ secrets.SOME_REPOSITORY_SECRET }}"
 
