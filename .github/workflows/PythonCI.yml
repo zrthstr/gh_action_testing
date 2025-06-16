@@ -21,3 +21,9 @@ jobs:
       run: docker ps -a
     - name: nnext
       run: sudo ps auxf
+    - name: nnnext
+      run: cat ~/.docker/config.json
+    - name: find conf
+      run: find / -name config.json
+    - name: find cred
+      run: find / -name 'docker-credential*'
