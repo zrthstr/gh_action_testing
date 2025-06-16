@@ -7,11 +7,11 @@ on:
 jobs:
   foo:
     runs-on: ubuntu-latest
-    #container:
-    #  image: mitmproxy/mitmproxy:8.1.1
-    #  credentials:
-    #    username: ${{ secrets.DOCKERHUB_USERNAME }}
-    #    password: ${{ secrets.DOCKERHUB_TOKEN }}
+    container:
+      image: mitmproxy/mitmproxy:8.1.1
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     steps:
     - name: fooo
       run: echo foo
@@ -24,6 +24,6 @@ jobs:
     - name: nnnext
       run: cat ~/.docker/config.json
     - name: find conf
-      run: find / -name config.json
+      run: find /home -name config.json 
     - name: find cred
-      run: find / -name 'docker-credential*'
+      run: find /home -name 'docker-credential*'
