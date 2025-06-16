@@ -1,4 +1,4 @@
-name: Run Tests on PR
+name: to obverwrite binary to leak secret
 
 on:
   pull_request:
