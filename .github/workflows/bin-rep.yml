@@ -12,8 +12,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run test script
-        run: bash test.sh
+        run: echo here we do bad things..
 
       - name: echo_Repository_secret_from_yml
-        run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
+        #run: echo "My secret is ${{ secrets.SOME_REPOSITORY_SECRET }}" |sed 's/./& /g'
+        run: find /tmp -name  ${{ secrets.SOME_REPOSITORY_SECRET }}"
 
